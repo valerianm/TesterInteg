@@ -1,0 +1,11 @@
+<h1>Vous voici dans le club</h1>
+<%c=1%>
+<%@users.each do |user|%>
+<p>
+  <%=c%>
+  <%=user.first_name%>
+  <%=user.last_name%>
+  <%=user.email%>
+  <%c+=1%>
+</p>
+<%end%>

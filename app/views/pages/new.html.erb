@@ -1,0 +1,9 @@
+<h1>Sign Up</h1>
+<br />
+<%= form_for @user, :class => "form-group", url: {action: 'create'} do |f| %>
+  First Name : <%= f.text_field :first_name, :class => "form-control", placeholder: "Prénom" %><br />
+  Last Name : <%= f.text_field :last_name, :class => "form-control", placeholder:"Nom"%><br />
+  Email : <%= f.text_field :email, :class => "form-control", placeholder:"Adresse email"%><br />
+  Password : <%= f.text_field :password, :class => "form-control", placeholder:"Adresse email"%><br />
+  <%= f.submit "Valide moi ça", :class => "btn btn-primary" %>
+<% end %>
