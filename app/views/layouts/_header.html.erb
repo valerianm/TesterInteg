@@ -1,0 +1,19 @@
+<header>
+    <nav class="navbar navbar-dark bg-dark">
+      <% if logged_in? == true %>
+        <h3>
+          <a class="text-white" href="/">Accueil</a>
+          <a class="text-white" href="/club">Le club</a>
+        </h3>
+        <span>
+          <p><%= button_to "Log Out", logout_path, :method => "delete" %></p>
+        </span>
+      <% else %>
+        <h3>
+          <a class="text-white" href="/">Accueil</a>
+          <a class="text-white" href="/new">Sign Up</a>
+          <a class="text-white" href="/login">Login</a>
+        </h3>
+      <% end %>
+    </nav>
+</header>

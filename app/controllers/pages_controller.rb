@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def club
-    @users = User.all 
+    @users = User.all
   end
 
   def new
@@ -14,10 +14,10 @@ class PagesController < ApplicationController
     @user = User.create(first_name: params[:user][:first_name], last_name: params[:user][:last_name], email: params[:user][:email], password: params[:user][:password])
     if @user.valid?
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to "/home"
+      flash[:success] = "Succes"
+      redirect_to "/"
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'Invalid email/password'
       render 'new'
     end
   end

@@ -1,8 +1,11 @@
 <h1>Bienvenue sur le club privé</h1>
 <% if logged_in? %>
   <a class="btn btn-primary" href="/club" role="button">Acceder au club</a>
-  <%= link_to "Log out", logout_path, method: :delete %>
+  <br>
+  <%= button_to "Log Out", logout_path, :method => "delete" %>
 <% else %>
+<ul class="list-unstyled">
   <li><%= link_to "Log in", login_path %></li>
   <li><%= link_to "Sign Up", new_path %></li>
+</ul>
 <% end %>
